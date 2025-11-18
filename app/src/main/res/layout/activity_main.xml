@@ -23,7 +23,7 @@
         android:text="Podaj e-mail:" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -36,7 +36,7 @@
         android:text="Podaj haslo:" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/pass1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -49,7 +49,7 @@
         android:text="Powtorz haslo:" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/pass2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -66,7 +66,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnZatwierdz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -79,7 +79,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/bottomText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
