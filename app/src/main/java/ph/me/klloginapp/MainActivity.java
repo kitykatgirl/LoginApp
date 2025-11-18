@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(gut){
+            errorTextView.setText("");
             return true;
         }
         else {
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public boolean CheckPasswordMatching(EditText first, EditText second, TextView errorTextView){
         if (first.getText().toString().equals(second.getText().toString())){
+            errorTextView.setText("");
             return true;
         }
         else {
