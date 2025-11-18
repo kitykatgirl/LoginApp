@@ -1,6 +1,7 @@
 package ph.me.klloginapp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,11 +36,30 @@ public class MainActivity extends AppCompatActivity {
         Button btnZatwierdz = findViewById(R.id.btnZatwierdz);
         TextView bottomtext = findViewById(R.id.bottomText);
 
-
+        btnZatwierdz.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(CheckEmailValidity(email,bottomtext)){
+                            if (CheckPasswordMatching(pass1,pass2,bottomtext) && !pass1.getText().toString().isEmpty()){
+                                String finalText = "Witaj " + email.getText().toString();
+                                bottomtext.setText(finalText);
+                            }
+                        }
+                    }
+                }
+        );
     }
     public boolean CheckEmailValidity(EditText email, TextView errorTextView){
         char[] emailArray = email.getText().toString().toCharArray();
-        if(Objects.equals(emailArray, '@')) {
+        boolean gut = false;
+        for (char c : emailArray){
+            if (c == '@'){
+                gut = true;
+                break;
+            }
+        }
+        if(gut){
             return true;
         }
         else {
